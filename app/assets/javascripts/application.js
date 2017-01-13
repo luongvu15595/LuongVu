@@ -15,3 +15,4 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require microspost_script
