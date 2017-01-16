@@ -11,6 +11,9 @@ class UsersController < ApplicationController
   def show
     @microposts = @user.microposts.sort_by_created_at.
       paginate page: params[:page]
+    @relationship = current_user.active_relationships.
+      find_by followed_id: @user.id
+    @relation = current_user.active_relationships.build
   end
 
   def new
